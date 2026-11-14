@@ -1,0 +1,80 @@
+/* ServicePulse - dark operations dashboard theme */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 24px;
+  min-height: 100vh;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.site-header h1 { margin: 0 0 4px; color: #38bdf8; }
+.tagline { margin: 0 0 24px; color: #94a3b8; }
+
+/* Metrics row */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  background: #111c33;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+}
+
+.metric-value { font-size: 1.75rem; font-weight: 700; color: #38bdf8; }
+
+/* Service cards */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  padding: 16px;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  background: #111c33;
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.service-header h2 { margin: 0; font-size: 1rem; }
+.service-id { margin: 4px 0 12px; font-size: 0.85rem; color: #94a3b8; }
+.uptime { margin: 0; font-size: 0.9rem; }
+
+.badge {
+  padding: 2px 8px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.healthy { color: #4ade80; }
+.degraded { color: #fbbf24; }
+.down { color: #f87171; }
+.error-message { margin-top: 16px; color: #f87171; }

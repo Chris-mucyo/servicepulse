@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ServicePulse</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>ServicePulse</h1>
+      <p class="tagline">Live service health at a glance</p>
+    </header>
+
+    <main>
+      <!-- Live metrics summary -->
+      <section id="metrics" class="metrics">
+        <div class="metric">
+          <span class="metric-label">CPU</span>
+          <span class="metric-value" id="cpu-value">--</span>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Memory</span>
+          <span class="metric-value" id="memory-value">--</span>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Requests</span>
+          <span class="metric-value" id="requests-value">--</span>
+        </div>
+      </section>
+
+      <!-- Service cards are rendered here by app.js -->
+      <section id="services" class="services-grid"></section>
+
+      <p id="error-message" class="error-message" role="alert"></p>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
